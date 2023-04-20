@@ -1,0 +1,58 @@
+@use "./variables";
+
+@mixin hero-btn($bg-color: false, $color: false) {
+  padding: 15px 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  color: variables.$white;
+  transition: all linear 0.2s;
+
+  @if $bg-color {
+    background-color: $bg-color;
+  } @else {
+    background-color: variables.$primary-dark;
+  }
+
+  @if $color {
+    color: $color;
+  } @else {
+    color: variables.$white;
+  }
+}
+
+@mixin btn($bg-color: false, $color: false) {
+  padding: 15px 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: all linear 0.2s;
+
+  @if $bg-color {
+    background-color: $bg-color;
+  } @else {
+    background-color: variables.$primary-yellow;
+  }
+
+  @if $color {
+    color: $color;
+  } @else {
+    color: variables.$white;
+  }
+}

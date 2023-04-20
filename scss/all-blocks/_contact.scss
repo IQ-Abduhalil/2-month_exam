@@ -1,0 +1,130 @@
+@use "../variables";
+@use "../mixins";
+
+.contact {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 132px;
+  background-color: variables.$primary-dark;
+  display: flex;
+  margin-bottom: 247px;
+  background-image: url(../../images/contact-bgc.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+
+  &__right {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 450px;
+  }
+
+  &__title {
+    color: variables.$white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 62px;
+    margin-bottom: 14px;
+    margin-top: 62px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: variables.$primary-gray;
+    max-width: 334px;
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__input-email {
+    border: none;
+    padding: 18px 147px 12px 22px;
+    background-color: variables.$white;
+    border-radius: 5px;
+    outline: none;
+
+    &::placeholder {
+      color: variables.$primary-gray;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__input-name:focus {
+    border: 1px solid variables.$primary-yellow;
+  }
+
+  &__input-email:focus {
+    border: 1px solid variables.$primary-yellow;
+  }
+
+  &__input-name {
+    border: none;
+    padding: 18px 147px 12px 22px;
+    background-color: variables.$white;
+    border-radius: 5px;
+    outline: none;
+
+    &::placeholder {
+      color: variables.$primary-gray;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__textarea {
+    text-align: start;
+    margin-top: 14px;
+    width: 375px;
+    height: 165px;
+    resize: none;
+    padding: 17px 103px 86px 22px;
+    background-color: variables.$white;
+    outline: none;
+    margin-bottom: 30px;
+
+    &::placeholder {
+      color: variables.$primary-gray;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__textarea:focus {
+    border: 2px solid variables.$primary-yellow;
+  }
+
+  &__btn {
+    @include mixins.btn($bg-color: variables.$light-yellow);
+  }
+
+  &__btn:hover {
+    @include mixins.btn(
+      $bg-color: variables.$primary-yellow,
+      $color: variables.$primary-dark
+    );
+  }
+
+  &__btn:active {
+    @include mixins.btn(
+      $bg-color: variables.$primary-yellow,
+      $color: variables.$primary-dark
+    );
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,197 @@
+@use "../variables";
+@use "../mixins";
+
+.header {
+  position: relative;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  &__top-link {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: variables.$primary-dark;
+  }
+
+  &__top-link::before {
+    content: url(../../icons-svg/header-top-home.svg);
+    margin-right: 9px;
+    margin-left: 193px;
+  }
+
+  &__top-link:hover {
+    color: variables.$light-yellow;
+  }
+
+  &__top-link:active {
+    color: variables.$primary-dark;
+    opacity: 0.5;
+  }
+
+  &__top-tels {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  &__top-tel {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: variables.$primary-dark;
+    transition: all linear 0.2s;
+  }
+
+  &__top-tel:hover {
+    color: variables.$light-yellow;
+  }
+
+  &__top-tel:active {
+    color: variables.$primary-dark;
+    opacity: 0.5;
+  }
+
+  &__top-tel::before {
+    content: url(../../icons-svg/header-top-tel.svg);
+    margin-right: 9px;
+  }
+
+  &__top-tel--phone {
+    display: flex;
+    align-items: center;
+  }
+
+  &__top-tel--phone::before {
+    content: url(../../icons-svg/header-top-dot.svg);
+    margin-right: 9px;
+  }
+
+  &__top-times {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+
+  &__top-time {
+    display: flex;
+    align-items: center;
+    color: variables.$primary-dark;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__top-time:hover {
+    color: variables.$light-yellow;
+  }
+
+  &__top-time:active {
+    color: variables.$primary-dark;
+    opacity: 0.5;
+  }
+
+  &__top-time--icon::before {
+    content: url(../../icons-svg/header-top-img.svg);
+    margin-right: 7px;
+  }
+
+  &__bottom {
+    background-color: variables.$white;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__bottom-navs {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    padding-top: 15px;
+    padding-bottom: 19px;
+  }
+
+  &__bottom-nav {
+    display: flex;
+    align-items: center;
+    color: variables.$primary-dark;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    height: 21px;
+  }
+
+  &__bottom-nav:hover {
+    border-bottom: 4px solid variables.$yelow;
+  }
+
+  &__bottom-nav:active {
+    border-bottom: 4px solid variables.$yelow;
+    opacity: 0.5;
+  }
+
+  &__bottom-nav--fish {
+    margin-left: 110px;
+  }
+
+  &__bottom-nav--fish::before {
+    margin-right: 12px;
+    content: url(../../icons-svg/header-fish.svg);
+  }
+
+  &__logo {
+    position: absolute;
+    top: 21px;
+  }
+
+  &__logo:hover {
+    opacity: 0.6;
+  }
+
+  &__logo:active {
+    opacity: 0.3;
+  }
+
+  &__btn-link {
+    display: flex;
+    align-items: center;
+    border: none;
+    color: variables.$primary-dark;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    background-color: transparent;
+  }
+
+  &__btn-link:hover {
+    opacity: 0.6;
+  }
+
+  &__btn-link:active {
+    opacity: 0.4;
+  }
+
+  &__btn-link::before {
+    content: url(../../icons-svg/header-pet.svg);
+    margin-right: 7px;
+  }
+}

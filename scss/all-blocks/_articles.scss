@@ -1,0 +1,123 @@
+@use "../variables";
+@use "../mixins";
+
+.articles {
+  padding-top: 108px;
+  padding-bottom: 132px;
+
+  &__container {
+    display: flex;
+    gap: 24px;
+  }
+  &__title {
+    text-align: center;
+    color: variables.$primary-dark;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 20px;
+    margin-bottom: 80px;
+  }
+
+  &__card {
+    max-width: 305px;
+    height: 435px;
+    border-radius: 5px;
+    border: 2px solid variables.$border;
+    cursor: pointer;
+  }
+
+  &__card:hover > &__card-btn {
+    color: variables.$primary-yellow;
+  }
+
+  &__card:active > &__card-btn {
+    color: variables.$primary-gray;
+  }
+
+  &__card-data {
+    text-align: end;
+    color: variables.$primary-gray;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 21px;
+    margin-right: 22px;
+  }
+
+  &__card-title {
+    color: variables.$primary-dark;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    max-width: 182px;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    margin-left: 30px;
+  }
+
+  &__card-text {
+    color: variables.$primary-gray;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 244px;
+    margin-bottom: 37px;
+    margin-left: 30px;
+  }
+
+  &__card-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__card-btn::before {
+    content: url(../../icons-svg/header-pet.svg);
+    margin-right: 7px;
+    margin-left: 30px;
+  }
+
+  &__card-middle {
+    display: flex;
+    max-width: 640px;
+    height: 435px;
+    border-radius: 5px;
+    background-color: variables.$white;
+    cursor: pointer;
+  }
+
+  &__card-middle:hover .articles__card-right > .articles__card-btn {
+    color: variables.$primary-yellow;
+  }
+
+  &__card-middle:active .articles__card-right > .articles__card-btn {
+    color: variables.$primary-gray;
+  }
+
+  &__card-right--top {
+    display: flex;
+    align-items: center;
+    gap: 67px;
+    margin-bottom: 32px;
+  }
+
+  &__card-list {
+    display: flex;
+    gap: 7px;
+    margin-left: 30px;
+    margin-top: 21px;
+  }
+
+  &__card-title--right {
+    margin-bottom: 15px;
+  }
+
+  &__card-text--right {
+    margin-bottom: 36px;
+  }
+}

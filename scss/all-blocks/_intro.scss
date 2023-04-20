@@ -1,0 +1,57 @@
+@use "../variables";
+@use "../mixins";
+
+.intro {
+  padding-top: 73px;
+  padding-bottom: 95px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  &__border {
+    display: inline-block;
+    width: 140px;
+    height: 1px;
+    background-color: variables.$primary-gray;
+  }
+
+  &__border--bottom {
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    max-width: 753px;
+    color: variables.$primary-gray;
+    margin-left: 55px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 15px;
+  }
+
+  &__img--two {
+    position: absolute;
+    top: 75px;
+    right: 195px;
+  }
+
+  &__bottom-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: variables.$primary-dark;
+  }
+}

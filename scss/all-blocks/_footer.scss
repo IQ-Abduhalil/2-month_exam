@@ -1,0 +1,77 @@
+@use "../variables";
+@use "../mixins";
+
+.footer {
+  padding-top: 54px;
+  padding-bottom: 23px;
+  background-color: variables.$footer-bg;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo:hover {
+    opacity: 0.7;
+  }
+  &__logo:active {
+    opacity: 0.5;
+  }
+
+  &__lists {
+    display: flex;
+    gap: 100px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__item {
+    color: variables.$primary-dark;
+  }
+
+  &__item:active {
+    color: variables.$primary-gray;
+  }
+
+  &__item--middle::before {
+    content: url(../../icons-svg/header-top-home.svg);
+    margin-right: 7px;
+    margin-left: -18px;
+  }
+
+  &__item:hover {
+    color: variables.$light-yellow;
+  }
+
+  &__item:active {
+    color: variables.$primary-dark;
+    opacity: 0.5;
+  }
+
+  &__item--next {
+    width: 157px;
+  }
+
+  &__item--next::before {
+    content: url(../../icons-svg/header-top-tel.svg);
+    margin-right: 7px;
+    margin-left: -18px;
+  }
+
+  &__item--tel::before {
+    content: url(../../icons-svg/header-top-tel.svg);
+    margin-right: 5px;
+    margin-left: -18px;
+  }
+
+  &__bottom {
+    margin-top: 28px;
+    text-align: end;
+    color: variables.$primary-gray;
+    cursor: pointer;
+  }
+}

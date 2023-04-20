@@ -1,0 +1,56 @@
+@use "../variables";
+@use "../mixins";
+
+.hero {
+  margin-top: -70px;
+  padding-bottom: 311px;
+  background-image: url(../../images/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    padding-top: 223px;
+    margin-right: 32px;
+    margin-left: auto;
+    max-width: 608px;
+    color: variables.$primary-dark;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 64px;
+    margin-bottom: 29px;
+  }
+
+  &__title--blue {
+    color: variables.$primary-blue;
+  }
+
+  &__text {
+    max-width: 495px;
+    color: variables.$primary-gray;
+    margin-right: 145px;
+    margin-left: auto;
+    margin-bottom: 38px;
+  }
+
+  &__btn {
+    @include mixins.hero-btn();
+    margin-right: 457px;
+    margin-left: auto;
+  }
+
+  &__btn:hover {
+    @include mixins.hero-btn(
+      $bg-color: variables.$primary-yellow,
+      $color: variables.$primary-dark
+    );
+  }
+
+  &__btn:active {
+    @include mixins.hero-btn(
+      $bg-color: variables.$primary-yellow,
+      $color: variables.$primary-dark
+    );
+    opacity: 0.6;
+  }
+}

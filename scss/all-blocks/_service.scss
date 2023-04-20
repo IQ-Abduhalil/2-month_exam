@@ -1,0 +1,163 @@
+@use "../variables";
+@use "../mixins";
+
+.service {
+  padding-top: 95px;
+  padding-bottom: 298px;
+  &__title {
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 54px;
+    color: variables.$primary-dark;
+    margin-bottom: 80px;
+  }
+
+  &__top-img {
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+
+  &__top-img:hover {
+    background-color: variables.$white;
+  }
+
+  &__top-img:active {
+    background-color: variables.$white;
+    opacity: 0.7;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__wrappers {
+    display: flex;
+    gap: 13px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 193px;
+    height: 201px;
+    background-color: variables.$white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 14px;
+  }
+
+  &__wrapper:hover {
+    opacity: 0.8;
+  }
+
+  &__wrapper:active {
+    opacity: 0.6;
+  }
+
+  &__wrapper-text {
+    max-width: 126px;
+    color: variables.$primary-dark;
+  }
+
+  &__wrapper-img {
+    margin-top: 30px;
+    margin-bottom: 21px;
+  }
+
+  &__box {
+    background-color: variables.$white;
+    border-radius: 5px;
+    margin-right: 43px;
+    margin-left: 43px;
+    padding: 41px 105px 41px 8px;
+    display: flex;
+    align-items: center;
+    gap: 67px;
+  }
+
+  &__right-title {
+    color: variables.$primary-dark;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 20px;
+    margin-bottom: 18px;
+  }
+
+  &__right-text {
+    color: variables.$primary-gray;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 492px;
+    margin-bottom: 34px;
+  }
+
+  &__right-text--top {
+    margin-bottom: 9px;
+    max-width: 492px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 21px;
+  }
+
+  &__btn--left {
+    @include mixins.btn();
+  }
+
+  &__btn--left::before {
+    content: url(../../icons-svg/service-img1.svg);
+    margin-right: 6px;
+  }
+
+  &__btn--left:hover {
+    @include mixins.btn(
+      $bg-color: variables.$primary-dark,
+      $color: variables.$primary-yellow
+    );
+  }
+
+  &__btn--left:active {
+    @include mixins.btn(
+      $bg-color: variables.$primary-dark,
+      $color: variables.$primary-yellow
+    );
+    opacity: 0.7;
+  }
+
+  &__btn {
+    @include mixins.btn(
+      $bg-color: variables.$primary-dark,
+      $color: variables.$white
+    );
+  }
+
+  &__btn::before {
+    content: url(../../icons-svg/service-img2.svg);
+    margin-right: 6px;
+  }
+
+  &__btn:hover {
+    @include mixins.btn(
+      $bg-color: variables.$primary-yellow,
+      $color: variables.$white
+    );
+  }
+
+  &__btn:active {
+    @include mixins.btn(
+      $bg-color: variables.$primary-yellow,
+      $color: variables.$white
+    );
+    opacity: 0.7;
+  }
+}

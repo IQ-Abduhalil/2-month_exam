@@ -1,0 +1,76 @@
+@use "../variables";
+@use "../mixins";
+
+.subscription {
+  background-image: url(../../images/subs-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 88px;
+  margin-bottom: 108px;
+  &__container {
+    display: flex;
+    position: relative;
+  }
+
+  &__title {
+    color: variables.$white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 20px;
+    margin-bottom: 32px;
+    margin-left: 222px;
+  }
+  &__full {
+    display: flex;
+    gap: 21px;
+    margin-left: 222px;
+  }
+
+  &__input {
+    border: none;
+    padding: 18px 147px 12px 22px;
+    background-color: variables.$white;
+    border-radius: 5px;
+    outline: none;
+
+    &::placeholder {
+      color: variables.$primary-gray;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__btn {
+    @include mixins.btn($bg-color: variables.$primary-dark);
+  }
+
+  &__btn:hover {
+    @include mixins.btn(
+      $bg-color: variables.$primary-yellow,
+      $color: variables.$primary-dark
+    );
+  }
+
+  &__btn:active {
+    @include mixins.btn(
+      $bg-color: variables.$primary-yellow,
+      $color: variables.$primary-dark
+    );
+    opacity: 0.8;
+  }
+
+  &__input:focus {
+    border: 2px solid variables.$primary-yellow;
+  }
+
+  &__right-img {
+    position: absolute;
+    top: -225px;
+    right: 0;
+    left: auto;
+  }
+}
